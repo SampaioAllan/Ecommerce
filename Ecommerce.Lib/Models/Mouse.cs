@@ -2,10 +2,19 @@ namespace Ecommerce.Lib.Models
 {
     public class Mouse
     {
-        public int Dpi { get; set; }
+        private int Dpi { get; set; }
         public Mouse(int dpi)
         {
+            SetDpi(dpi);
+        }
+
+        private void SetDpi(int dpi)
+        {
             Dpi = dpi;
+        }
+        public int GetDpi()
+        {
+            return Dpi;
         }
     }
 }
